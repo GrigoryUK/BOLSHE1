@@ -61,6 +61,27 @@
                     }
                 }
 
+                .image {
+                  width: 100%;
+                  height: 100%;
+                }
+
+                video {
+                  width: 100%;
+                  height: 100%;
+                  transform: scale(1.5);
+                }
+
+                .default__item--before {
+                  width: 100%;
+                  height: 100%;
+                }
+
+                .default__item--after {
+                  width: 100%;
+                  height: 100%;
+                }
+
                 &:nth-child(1) {
                     .default__block {
                         grid-column: 8 / 5 span;
@@ -77,17 +98,20 @@
                         .default__item {
                             max-width: 683px;
                             min-width: 683px;
+                            max-height: 910px;
                             margin-bottom: 20px;
 
                             @include big-desktop {
                                 max-width: 508px;
                                 min-width: 508px;
+                                max-height: 677px;
                                 margin-bottom: 15px;
                             }
 
                             @include tablet {
                                 max-width: 326px;
                                 min-width: 326px;
+                                max-height: 434px;
                                 margin-bottom: 10px;
                             }
 
@@ -95,6 +119,8 @@
                                 max-width: 100%;
                                 min-width: auto;
                             }
+
+
                         }
 
                         .text {
@@ -128,12 +154,15 @@
                         .default__item {
                             max-width: 543px;
                             min-width: 543px;
+                            max-height: 724px;
 
                             margin-bottom: 20px;
 
                             @include big-desktop {
                                 max-width: 403px;
                                 min-width: 403px;
+                                max-height: 537px;
+
                                 margin-bottom: 15px;
                             }
 
@@ -141,6 +170,7 @@
                                 margin-bottom: 10px;
                                 max-width: 251px;
                                 min-width: 251px;
+                                max-height: 334px;
                             }
 
                             @include mobile {
@@ -190,18 +220,20 @@
                         .default__item {
                             max-width: 404px;
                             min-width: 404px;
-
+                            max-height: 505px;
                             margin-left: 20px;
 
                             @include big-desktop {
                                 max-width: 300px;
                                 min-width: 300px;
+                                max-height: 376px;
                                 margin-left: 15px;
                             }
 
                             @include tablet {
                                 max-width: 214px;
                                 min-width: 214px;
+                                max-height: 267px;
                                 margin-left: 0px;
                                 margin-bottom: 10px;
                             }
@@ -246,15 +278,17 @@
                             .default__item {
                                 max-width: 316px;
                                 min-width: 316px;
-
+                                max-height: 395px;
                                 @include big-desktop {
                                     max-width: 244px;
                                     min-width: 244px;
+                                    max-height: 306px;
                                 }
 
                                 @include tablet {
                                     max-width: 124px;
                                     min-width: 124px;
+                                    max-height: 155px;
                                 }
                             }
 
@@ -277,15 +311,17 @@
                             .default__item {
                                 max-width: 544px;
                                 min-width: 544px;
-
+                                max-height: 1130px;
                                 @include big-desktop {
                                     max-width: 404px;
                                     min-width: 404px;
+                                    max-height: 841px;
                                 }
 
                                 @include tablet {
                                     max-width: 212px;
                                     min-width: 212px;
+                                    max-height: 441px;
                                 }
                             }
                         }
@@ -322,6 +358,29 @@
 
                 .default__item {
                     margin-bottom: 10px;
+                    max-width: 576px;
+                    max-height: 576px;
+
+                    .image {
+                      width: 100%;
+                      height: 100%;
+                    }
+
+                    video {
+                      width: 100%;
+                      height: 100%;
+                      transform: scale(1.5);
+                    }
+
+                    .default__item--before {
+                      width: 100%;
+                      height: 100%;
+                    }
+
+                    .default__item--after {
+                      width: 100%;
+                      height: 100%;
+                    }
                 }
 
                 .text {

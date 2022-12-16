@@ -58,26 +58,43 @@
     }
 
     &__block {
+      max-width: 805px;
+      max-height: 837px;
+
+      @include big-desktop {
+        max-width: 595px;
+        max-height: 618px;
+      }
+
+      // @include tablet {
+      //   max-width: 805px;
+      //   max-height: 837px;
+      // }
+
+      @include mobile {
+        max-width: 576px;
+        max-height: 576px;
+      }
+      .default__item {
+        width: 100%;
+        height: 100%;
+      }
+
+      .default__item--after {
+        width: 100%;
+        height: 100%;
+      }
 
         .image {
-            // max-width: 805px;
-            // min-width: 805px;
-            // max-height: 837px;
-            // min-height: 837px;
+          width: 100%;
+          height: 100%;
 
-            // @include big-desktop {
-            //     max-width: 595px;
-            //     min-width: 595px;
-            //     max-height: 618px;
-            //     min-height: 618px;
-            // }
+        }
 
-            // @include tablet {
-            //     max-width: 319px;
-            //     min-width: 319px;
-            //     max-height: 332px;
-            //     min-height: 332px;
-            // }
+        video {
+          width: 100%;
+          height: 100%;
+          transform: scale(1.5);
         }
     }
 
