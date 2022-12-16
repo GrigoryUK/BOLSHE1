@@ -1,0 +1,86 @@
+.drop {
+    &__container {
+        .title {
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 150px;
+
+            @include tablet {
+                margin-bottom: 100px;
+            }
+
+            @include mobile {
+                margin-bottom: 70px;
+            }
+        }
+    }
+
+    &__content {
+        margin-bottom: 400px;
+
+        @include big-desktop {
+            margin-bottom: 300px;
+        }
+
+        @include tablet {
+            margin-bottom: 250px;
+        }
+
+        @include mobile {
+            margin-bottom: 200px;
+        }
+        .text {
+            padding-top: 150px;
+            padding-bottom: 130px;
+            margin: 0 auto;
+            max-width: 1100px;
+
+            @include big-desktop {
+                max-width: 1030px;
+            }
+
+            @include tablet {
+                padding-top: 100px;
+                padding-bottom: 110px;
+            }
+
+            @include mobile {
+                padding: 0;
+                padding: 70px 0;
+            }
+
+            p {
+
+                @include tablet {
+                    font-size: 14px;
+                }
+
+                @include mobile {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    &__img {
+        &:not(:first-child) {
+            margin-bottom: 50px;
+        }
+
+        @include tablet {
+            &:not(:first-child) {
+                margin-bottom: 30px;
+            }
+        }
+
+        @include mobile {
+            &:not(:first-child) {
+                margin-bottom: 15px;
+            }
+        }
+
+        .image {
+            width: 100%;
+        }
+    }
+}

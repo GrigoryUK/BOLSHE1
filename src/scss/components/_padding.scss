@@ -1,0 +1,11 @@
+.padding {
+    padding-top: 118px;
+
+    @include tablet {
+        padding-top: 88px;
+    }
+
+    @include mobile {
+        padding-top: 50px;
+    }
+}

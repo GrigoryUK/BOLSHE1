@@ -1,0 +1,45 @@
+.blockM {
+
+    &__video {
+        position: absolute;
+        // top: -10%;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+
+        video {
+            width: 100vw;
+            height: auto;
+
+
+
+
+            @include big-desktop {
+                min-width: fit-content;
+                height: fit-content;
+            }
+
+
+            // @include big-desktop {
+            //     width: max-content;
+            //     height: 100vh;
+            // }
+        }
+    }
+
+    &__link {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 0;
+        transform: translate(-50%, -50%);
+
+        @include hover {
+
+            .svg--logo--big {
+                opacity: .5;
+            }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+.smi {
+    &__container {
+        .subtitle {
+            margin: 0 auto;
+            margin-bottom: 150px;
+
+            @include big-desktop {
+                margin-bottom: 100px;
+            }
+
+            @include tablet {
+                max-width: 539px;
+            }
+
+            @include mobile {
+                margin-bottom: 70px;
+            }
+
+            h2 {
+                margin: 0;
+                font-family: "Druk Wide Cyr";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 46px;
+                line-height: 130%;
+                text-align: center;
+
+                @include mobile {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 50px;
+        row-gap: 50px;
+        margin-bottom: 400px;
+
+        @include big-desktop {
+            margin-bottom: 300px;
+        }
+
+        @include tablet {
+            row-gap: 50px;
+            column-gap: 30px;
+            margin-bottom: 250px;
+        }
+
+        @include mobile {
+            column-gap: 0;
+            row-gap: 15px;
+            grid-template-columns: repeat(1, 1fr);
+            margin-bottom: 200px;
+        }
+    }
+
+    &__block {
+
+        .image {
+            // max-width: 805px;
+            // min-width: 805px;
+            // max-height: 837px;
+            // min-height: 837px;
+
+            // @include big-desktop {
+            //     max-width: 595px;
+            //     min-width: 595px;
+            //     max-height: 618px;
+            //     min-height: 618px;
+            // }
+
+            // @include tablet {
+            //     max-width: 319px;
+            //     min-width: 319px;
+            //     max-height: 332px;
+            //     min-height: 332px;
+            // }
+        }
+    }
+
+    &__span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        font-family: "Druk Wide Cyr";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 46px;
+        line-height: 160%;
+        color: var(--primary2);
+
+        @include small-tablet {
+            font-size: 24px;
+        }
+    }
+}

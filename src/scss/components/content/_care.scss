@@ -1,0 +1,451 @@
+.care {
+    &__container {
+        .title {
+            margin: 0 auto;
+            text-align: center;
+            max-width: 743px;
+
+            @include big-desktop {
+                max-width: 597px;
+            }
+        }
+    }
+
+    &__content {
+        margin-bottom: 400px;
+
+        @include big-desktop {
+            margin-bottom: 300px;
+        }
+
+        @include tablet {
+            margin-bottom: 250px;
+        }
+
+        @include mobile {
+            margin-bottom: 200px;
+        }
+    }
+
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 15px;
+
+        @include mobile {
+            column-gap: 0px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .btn__care {
+            opacity: 0;
+            visibility: hidden;
+
+            @include tablet {
+                opacity: 0.5;
+                visibility: visible;
+            }
+        }
+
+        .care__boxs {
+            cursor: pointer;
+        }
+
+
+        .image {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        &:nth-child(odd) {
+            transform: translate(-0%, -5%);
+
+            @include big-desktop {
+                transform: translate(-0%, -10%);
+            }
+
+            @include tablet {
+                transform: translate(-0%, 1%);
+            }
+
+            @include mobile {
+                flex-direction: column-reverse;
+            }
+            .care__block {
+                &:nth-child(1) {
+                    grid-column: 1 / 6 span;
+                    transform: translate(0%, 10%);
+
+                    @include big-desktop {
+                        grid-column: 1 / 5 span;
+                        transform: translate(-13%, 4%);
+                    }
+
+
+
+                    @include tablet {
+                        transform: translate(-10%, -0%);
+                    }
+
+                    .care__boxs {
+                        display: flex;
+                        align-items: center;
+
+                        @include tablet {
+                            flex-direction: column;
+                        }
+
+                        @include mobile {
+                            flex-direction: row;
+                        }
+                    }
+
+                    .image {
+                        // min-height: 947px;
+                        // max-height: 947px;
+                        min-width: 683px;
+                        max-width: 683px;
+
+                        @include big-desktop {
+                            min-width: 600px;
+                            max-width: 600px;
+                        }
+
+                        @include tablet {
+                            min-width: 440px;
+                            max-width: 440px;
+                        }
+
+                        @include mobile {
+                            min-width: 250px;
+                            max-width: 250px;
+                        }
+                    }
+
+                    .text {
+                        min-width: 245px;
+                        max-width: 245px;
+                        margin-top: 19em;
+                        margin-left: -2em;
+
+                        @include tablet {
+                            margin: 0;
+                            text-align: center;
+                        }
+
+                        @include mobile {
+                            max-width: 122px;
+                            min-width: 122px;
+                            text-align: left;
+                        }
+                    }
+
+                    .btn__care {
+                        @include mobile {
+                            text-align: left;
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    grid-column: 7 / 6 span;
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+                    transform: translate(-5%, 0%);
+
+                    @include big-desktop {
+                        grid-column: 6 / 6 span;
+                    }
+
+                    @include tablet {
+                        transform: translate(-10%, 0%);
+                    }
+
+                    @include small-tablet {
+                        transform: translate(-50%, 0%);
+                    }
+
+                    @include mobile {
+                        display: block;
+                        transform: none;
+                        transform: translate(80px, 0%);
+                    }
+
+                    .image {
+                        min-height: 1689px;
+                        max-height: 1689px;
+                        min-width: 1000px;
+                        max-width: 1000px;
+
+                        @include big-desktop {
+                            min-height: 1369px;
+                            max-height: 1369px;
+                            min-width: 914px;
+                            max-width: 914px;
+                        }
+
+                        @include tablet {
+                            min-height: 1001px;
+                            max-height: 1001px;
+                            min-width: 668px;
+                            max-width: 668px;
+                        }
+
+                        @include mobile {
+                            min-height: 721px;
+                            max-height: 721px;
+                            min-width: 481px;
+                            max-width: 481px;
+                        }
+                    }
+
+                    .care__boxs {
+
+
+                        @include mobile {
+                            display: flex;
+                            align-items: center;
+                            flex-direction: row-reverse;
+                        }
+
+                    }
+
+                    .care__text {
+                        // display: flex;
+                        // flex-direction: column;
+                        // align-items: center;
+                        // justify-content: center;
+                        // margin-top: 40px;
+                        // margin-right: -7em;
+                        text-align: center;
+                        position: absolute;
+                        transform: translate(26em, 1em);
+
+                        p {
+                            min-width: 286px;
+                            max-width: 286px;
+                        }
+
+                        @include big-desktop {
+                            transform: translate(24em, 1em);
+                        }
+
+                        @include tablet {
+                            transform: translate(14em, 1em);
+                        }
+
+                        @include mobile {
+                            position: relative;
+                            transform: translate(17em, -1em);
+                            text-align: left;
+
+                            p {
+                                min-width: 186px;
+                                max-width: 186px;
+                            }
+                        }
+
+                        .btn__care {
+                            @include mobile {
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &:nth-child(even) {
+            // transform: translate(-0%, -20%);
+
+            margin-top: -33.6%;
+
+            @include big-desktop {
+                margin-top: -40.8%;
+            }
+
+            @include tablet {
+                margin-top: -8%;
+            }
+
+            .care__block {
+                &:nth-child(1) {
+                    transform: translate(-12%, 0%);
+                    grid-column: 1 / 6 span;
+
+                    @include big-desktop {
+                        transform: translate(-32%, 0%);
+                    }
+
+                    @include mobile {
+                        transform: none;
+                        transform: translate(12em, 0%);
+                    }
+
+                    .care__boxs {
+                        display: flex;
+                        align-items: center;
+                        @include mobile {
+
+                            flex-direction: row-reverse;
+                        }
+
+                    }
+
+                    .image {
+                        min-height: 1884px;
+                        max-height: 1884px;
+                        min-width: 914px;
+                        max-width: 914px;
+
+                        @include big-desktop {
+                            min-height: 1436px;
+                            max-height: 1436px;
+                            min-width: 914px;
+                            max-width: 914px;
+                        }
+
+                        @include tablet {
+                            max-width: 668px;
+                            min-width: 668px;
+                            min-height: 1050px;
+                            max-height: 1050px;
+                        }
+
+                        @include mobile {
+                            max-width: 440px;
+                            min-width: 440px;
+                            min-height: 662px;
+                            max-height: 662px;
+                        }
+                    }
+
+                    .care__text {
+                        transform: translate(-16em, -27em);
+                        min-width: 404px;
+                        max-width: 404px;
+                        @include big-desktop {
+                            transform: translate(-23em, -20em);
+                        }
+
+                        @include tablet {
+                            max-width: 251px;
+                            min-width: 251px;
+                            transform: translate(-18em, -13em);
+
+                            .btn__care {
+                                text-align: left;
+                            }
+                        }
+
+                        @include mobile {
+                            max-width: 138px;
+                            min-width: 138px;
+                            transform: translate(3em, 9em);
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    grid-column: 7 / 6 span;
+                    transform: translate(-100px, 48%);
+
+                    @include tablet {
+                        grid-column: 9 / 5 span;
+                        transform: translate(-50px, 40%);
+                    }
+
+                    @include mobile {
+                        transform: translate(-75px, 0%);
+                    }
+
+                    .care__boxs {
+                        display: flex;
+                        align-items: center;
+
+                        @include tablet {
+                            flex-direction: column;
+                        }
+                    }
+                    .image {
+                        min-height: 947px;
+                        max-height: 947px;
+                        min-width: 683px;
+                        max-width: 683px;
+
+                        @include big-desktop {
+                            min-height: 745px;
+                            max-height: 745px;
+                            min-width: 478px;
+                            max-width: 478px;
+                        }
+
+                        @include tablet {
+                            min-height: 600px;
+                            max-height: 600px;
+                            min-width: 450px;
+                            max-width: 450px;
+                        }
+
+                        @include mobile {
+                            min-height: 324px;
+                            max-height: 324px;
+                            min-width: 200px;
+                            max-width: 200px;
+                        }
+                    }
+
+                    .care__text {
+                        transform: translate(-2em, 0em);
+                        text-align: right;
+                        @include big-desktop {
+                            transform: translate(0em, 0em);
+                        }
+
+                        @include tablet {
+                            text-align: center;
+                        }
+
+                        @include mobile {
+                            transform: translate(0em, -1em);
+                        }
+                        p {
+                            min-width: 223px;
+                            max-width: 223px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // &__block {
+    //     // cursor: pointer;
+    // }
+
+    &__item {
+        transition: all 0.4s ease;
+
+        @include hover {
+            transform: scale(1.02);
+        }
+    }
+
+    &__text {
+        .text {
+            p {
+                text-transform: uppercase;
+
+                @include tablet {
+                    font-size: 14px;
+                }
+
+                @include mobile {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+}

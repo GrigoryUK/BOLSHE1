@@ -1,0 +1,53 @@
+.svg {
+
+    &--logo {
+
+        &--small {
+            max-width: 40px;
+            max-height: 46px;
+            fill: var(--primary1);
+        }
+
+        &--letter {
+            max-width: 230px;
+            max-height: 31px;
+            fill: var(--primary1);
+        }
+
+        &--mob {
+            max-width: 25px;
+            max-height: 28.5px;
+            min-width: 25px;
+            min-height: 28.5px;
+            fill: var(--primary1);
+        }
+
+        &--big {
+            max-width: 1132px;
+            min-width: 1132px;
+            fill: var(--primary1);
+            transition: all .6s ease;
+
+            @include big-desktop {
+                max-width: 1114px;
+                min-width: 1114px;
+            }
+
+            @include tablet {
+                max-width: 560px;
+                min-width: 560px;
+            }
+
+            @include mobile {
+                max-width: 220px;
+                min-width: 220px;
+
+            }
+        }
+    }
+
+    &--error {
+        max-width: 1660px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,31 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/padding";
+@import "./components/base/burger";
+@import "./components/base/preloader";
+@import "./components/base/fonts";
+@import "./components/base/svg";
+@import "./components/base/btn";
+@import "./components/base/item";
+@import "./components/base/modal";
+@import "./components/index";
+@import "./components/base/header";
+@import "./components/base/footer";
+@import "./components/content/policy";
+@import "./components/content/error";
+@import "./components/content/contact";
+@import "./components/content/mission";
+@import "./components/content/smi";
+@import "./components/content/drops";
+@import "./components/content/drop";
+@import "./components/content/care";
+@import "./components/content/blockM";
+@import "./components/content/catalog";
+
+
+

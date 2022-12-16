@@ -1,0 +1,196 @@
+.footer {
+    &__container {
+        padding-bottom: 30px;
+
+        .container {
+            @include tablet {
+                padding: 0;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        @include min-desktop {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+
+    &__list {
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        ul > li {
+            @include mr(50px);
+
+            @include big-desktop {
+                @include mr(30px);
+            }
+        }
+
+        ul > li > a {
+            margin: 0;
+            font-family: "Grtsk Tera";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            text-transform: uppercase;
+            color: var(--primary1);
+            transition: all 0.4s ease;
+
+            @include mobile {
+                font-size: 12px;
+                line-height: 14px;
+            }
+
+            @include hover {
+                opacity: 0.5;
+            }
+        }
+
+        &--right {
+            @include min-desktop {
+                margin-bottom: 20px;
+            }
+
+            @include tablet {
+                margin-bottom: 30px;
+                border-top: 1px solid var(--border);
+                ul {
+                    flex-direction: column;
+                    align-items: stretch;
+                    width: 100%;
+                }
+
+                ul > li {
+                    @include mr(0);
+                }
+
+                ul > li > a {
+                    display: block;
+                    width: 100%;
+                    padding: 20px 0;
+                    padding-left: 50px;
+                    border-bottom: 1px solid var(--border);
+                }
+            }
+
+            @include mobile {
+                margin-bottom: 0;
+
+                ul > li > a {
+                    display: block;
+                    width: 100%;
+                    padding: 20px 15px;
+                    // padding-left: 50px;
+                    border-bottom: 1px solid var(--border);
+                }
+            }
+        }
+
+        &--left {
+            @include tablet {
+                padding: 0 50px;
+            }
+
+            @include mobile {
+                padding: 0;
+
+                ul {
+                    flex-direction: column;
+                    align-items: stretch;
+                    width: 100%;
+                }
+
+                ul > li {
+                    @include mr(0);
+                }
+
+                ul > li > a {
+                    display: block;
+                    width: 100%;
+                    border-bottom: 1px solid var(--border);
+                    padding: 20px 15px;
+                }
+            }
+        }
+    }
+
+    &__copyright {
+        user-select: none;
+
+        @include tablet {
+            padding: 0 50px;
+        }
+
+        @include mobile {
+            padding: 0 15px;
+        }
+        span {
+            margin: 0;
+            font-family: "Grtsk Tera";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: var(--primary1);
+            opacity: 0.5;
+
+            @include mobile {
+                font-size: 10px;
+                line-height: 12px;
+            }
+
+            &:first-child {
+                margin-right: 50px;
+
+                @include big-desktop {
+                    margin-right: 63px;
+                }
+
+                @include mobile {
+                    margin-right: 18px;
+                }
+            }
+        }
+
+        a {
+            margin: 0;
+            font-family: "Grtsk Tera";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: var(--primary1);
+            transition: all 0.4s ease;
+            opacity: 0.5;
+
+
+            @include hover {
+                opacity: 1;
+            }
+
+            @include tablet {
+                text-decoration: underline;
+                text-underline-offset: 4px;
+                text-decoration-thickness: 0.05em;
+            }
+
+            @include mobile {
+                font-size: 10px;
+                line-height: 12px;
+            }
+        }
+    }
+}
