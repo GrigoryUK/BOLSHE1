@@ -71,7 +71,7 @@
         @include tablet {
           grid-template-columns: repeat(6, 1fr);
         }
-        &:nth-child(1) {
+        &--1 {
           .default__block {
             margin-top: 150px;
             grid-column: 2 / 6 span;
@@ -129,7 +129,7 @@
           }
         }
 
-        &:nth-child(2) {
+        &--2 {
           .default__block {
             grid-column: 8 / 5 span;
 
@@ -176,7 +176,7 @@
           }
         }
 
-        &:nth-child(3) {
+        &--3 {
           margin-top: -20%;
 
           .default__block {
@@ -232,7 +232,7 @@
           }
         }
 
-        &:nth-child(4) {
+        &--4 {
           margin-top: -36px;
           .default__block {
             grid-column: 6 / 4 span;
@@ -288,7 +288,7 @@
           }
         }
 
-        &:nth-child(5) {
+        &--5 {
           .default__block {
             grid-column: 1 / 6 span;
 
@@ -326,7 +326,7 @@
           }
         }
 
-        &:nth-child(6) {
+        &--6 {
           margin-top: -15%;
           @include tablet {
             margin-top: -5%;
@@ -367,7 +367,7 @@
           .default__item--text {
             position: relative;
 
-            
+
           }
         }
       }
