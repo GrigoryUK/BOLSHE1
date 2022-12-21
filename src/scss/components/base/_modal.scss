@@ -1,78 +1,84 @@
 .modal {
+  .graph-modal__container {
+    // transform: translateY(10%);
+  }
 
-    .graph-modal__container {
-        // transform: translateY(10%);
+  .fade.animate-open {
+    opacity: 1;
+    // transform: translateY(0%);
+  }
+  .fade,
+  .fade.animate-open {
+    // transition: transform .4s ease;
+  }
+
+  .graph-modal__container {
+    width: 90%;
+    max-width: 660px;
+    background-color: transparent;
+    border: none;
+    padding: 0 50px;
+
+    @include big-desktop {
+      max-width: 550px;
     }
 
-    .fade.animate-open {
-        opacity: 1;
-        // transform: translateY(0%);
-    }
-    .fade, .fade.animate-open {
-        // transition: transform .4s ease;
+    @include mac-desktop {
+      max-width: 500px;
     }
 
-    .graph-modal__container {
-        width: 90%;
-        max-width: 660px;
-        background-color: transparent;
-        border: none;
-        padding: 0 50px;
+    @include mobile {
+      max-width: 576px;
+      padding: 36px 0;
+    }
+  }
 
-        @include mobile {
-            padding: 36px 0;
+  .graph-modal__close {
+    width: 32px;
+    height: 32px;
+    right: 0px;
+    top: -4px;
+    background-image: none;
+
+    @include mobile {
+      width: 16px;
+      height: 16px;
+    }
+
+    @include hover {
+      .close__line {
+        &:first-child {
+          transform: translate(-50%, -50%) rotate(0deg);
         }
 
-    }
-
-    .graph-modal__close {
-        width: 32px;
-        height: 32px;
-        right: 0px;
-        top: 0px;
-        background-image: none;
-
-        @include mobile {
-            width: 16px;
-            height: 16px;
+        &:last-child {
+          transform: translate(-50%, -50%) rotate(0deg);
         }
-
-        @include hover {
-
-            .close__line {
-                &:first-child {
-                    transform: translate(-50%, -50%) rotate(0deg);
-                }
-
-                &:last-child {
-                    transform: translate(-50%, -50%) rotate(0deg);
-                }
-            }
-        }
+      }
     }
+  }
 
-    .btn__close {
-        position: relative;
-        height: 100%;
-        width: 100%;
+  .btn__close {
+    position: relative;
+    height: 100%;
+    width: 100%;
 
-        .close__line {
-            height: 1px;
-            width: 100%;
-            position: absolute;
-            background: var(--primary2);
-            top: 50%;
-            left: 50%;
-            transition: all 0.2s ease-out;
+    .close__line {
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      background: var(--primary2);
+      top: 50%;
+      left: 50%;
+      transition: all 0.2s ease-out;
 
+      &:first-child {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
 
-            &:first-child {
-                transform: translate(-50%, -50%) rotate(45deg);
-            }
-
-            &:last-child {
-                transform: translate(-50%, -50%) rotate(-45deg);
-            }
-        }
+      &:last-child {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
     }
+  }
 }

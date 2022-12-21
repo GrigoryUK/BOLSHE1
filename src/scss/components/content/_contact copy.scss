@@ -1,0 +1,249 @@
+.contact {
+  &__content {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    // grid-template-rows: repeat(12, 1fr);
+    // height: 100vh;
+    column-gap: 16px;
+    margin-bottom: 400px;
+
+    @include big-desktop {
+      margin-bottom: 300px;
+    }
+
+    @include tablet {
+      margin-bottom: 250px;
+    }
+
+    @include mobile {
+      margin-bottom: 200px;
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__info {
+    grid-column: 2 / 3 span;
+    margin-bottom: 159px;
+
+    @include big-desktop {
+      margin-bottom: 89px;
+    }
+
+    @include tablet {
+      margin-bottom: 132px;
+    }
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
+    .title {
+      margin-bottom: 40px;
+
+      @include tablet {
+        margin-bottom: 30px;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul > li {
+      @include mb(15px);
+    }
+
+    ul > li > a {
+      margin: 0;
+      transition: all 0.4s ease;
+      font-family: "Grtsk Tera";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: right;
+      color: var(--primary1);
+      text-transform: uppercase;
+
+      @include hover {
+        opacity: 0.5;
+      }
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+  }
+
+  &__img {
+    &--1 {
+      grid-column: 1 / 1 span;
+      position: relative;
+
+      .image {
+        position: absolute;
+        max-width: 403px;
+        min-width: 403px;
+        transform: translateX(-100%);
+
+        @include big-desktop {
+          max-width: 298px;
+          min-width: 298px;
+        }
+
+        @include tablet {
+          transform: translateX(-105%);
+          min-width: 217px;
+          max-width: 217px;
+        }
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &--2 {
+      grid-column: 6 / 3 span;
+      position: relative;
+
+      .image {
+        position: absolute;
+        transform: translateY(-100%);
+        margin-top: -118px;
+        max-width: 403px;
+        min-width: 403px;
+
+        @include big-desktop {
+          transform: translateY(-97%);
+          min-width: 333px;
+          max-width: 333px;
+        }
+
+        @include tablet {
+          display: none;
+        }
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &--3 {
+      grid-column: 6 / 2 span;
+      position: relative;
+
+      .image {
+        position: absolute;
+        transform: translateY(-68%);
+        min-width: 264px;
+        max-width: 264px;
+
+        @include big-desktop {
+          min-width: 194px;
+          max-width: 194px;
+        }
+
+        @include tablet {
+          transform: translateY(-120%);
+          min-width: 144px;
+          max-width: 144px;
+        }
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &--4 {
+      grid-column: 8 / 3 span;
+      position: relative;
+
+      .image {
+        transform: translateX(-16px);
+        position: absolute;
+        z-index: 2;
+        min-width: 404px;
+        max-width: 404px;
+
+        @include big-desktop {
+          min-width: 300px;
+          max-width: 300px;
+        }
+
+        @include tablet {
+          transform: translateX(13.5%) translateY(-50%);
+          min-width: 218px;
+          max-width: 218px;
+        }
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &--5 {
+      grid-column: 10 / 2 span;
+      position: relative;
+
+      .image {
+        position: absolute;
+        transform: translateY(-65%) translateX(7%);
+        min-width: 500px;
+        max-width: 500px;
+
+        @include big-desktop {
+          min-width: 400px;
+          max-width: 400px;
+        }
+
+        @include tablet {
+          transform: translateY(-130%) translateX(5%);
+          min-width: 218px;
+          max-width: 218px;
+        }
+
+        @include mobile {
+          transform: none;
+          position: relative;
+          min-width: 0px;
+          max-width: 100%;
+        }
+      }
+    }
+
+    &--6 {
+      grid-column: 2 / 3 span;
+
+      .image {
+        max-width: 403px;
+        min-width: 403px;
+
+        @include big-desktop {
+          max-width: 300px;
+          min-width: 300px;
+        }
+
+        @include tablet {
+          min-width: 218px;
+          max-width: 218px;
+        }
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+}

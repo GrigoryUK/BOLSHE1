@@ -84,7 +84,7 @@
 
     @include mobile {
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       position: relative;
     }
   }
@@ -143,7 +143,7 @@
       line-height: 22px;
       color: var(--primary1);
       text-transform: uppercase;
-      transition: all 0.4s ease;
+      transition: all 0.1s ease;
 
       @include hover {
         opacity: 0.5;
@@ -151,7 +151,7 @@
     }
 
     &--caret {
-      transition: all 0.4s ease;
+      transition: all 0.1s ease;
 
       &::before,
       &::after {
@@ -163,7 +163,7 @@
         width: 6px;
         height: 2px;
 
-        transition: all 0.4s ease-out;
+        transition: all 0.25s ease-out;
 
         background-color: var(--primary1);
 
@@ -220,7 +220,7 @@
       line-height: 22px;
       color: var(--primary1);
       text-transform: uppercase;
-      transition: all 0.4s ease;
+      transition: all 0.1s ease;
       @include hover {
         opacity: 0.5;
       }

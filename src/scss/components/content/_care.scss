@@ -256,14 +256,18 @@
     &:nth-child(even) {
       // transform: translate(-0%, -20%);
 
-      margin-top: -33.6%;
+      margin-top: -34.9em;
 
       @include big-desktop {
-        margin-top: -40.8%;
+        margin-top: -31.2em;
+      }
+
+      @include mac-desktop {
+        margin-top: -31.2em;
       }
 
       @include tablet {
-        margin-top: -8%;
+        margin-top: -5em;
       }
 
       .care__block {
@@ -274,6 +278,8 @@
           @include big-desktop {
             transform: translate(-32%, 0%);
           }
+
+
 
           @include mobile {
             transform: none;

@@ -1,4 +1,6 @@
 .title {
+  position: relative;
+  z-index: 5;
   margin: 0;
   font-family: "Druk Wide Cyr";
   font-style: normal;
@@ -7,6 +9,10 @@
   line-height: 130%;
   text-transform: uppercase;
   color: var(--primary1);
+
+  @include mobile {
+    z-index: 1;
+  }
 
   h1 {
     margin: 0;
@@ -20,7 +26,7 @@
     text-transform: uppercase;
 
     @include mobile {
-      font-size: 24px;
+      font-size: 28px;
       line-height: 160%;
     }
   }
@@ -47,6 +53,10 @@
     font-size: var(--font-size-m);
     line-height: var(--font-line-m);
     color: var(--primary1);
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 
   ol {

@@ -84,6 +84,13 @@
   }
 
   &__img {
+
+    &--group {
+      grid-column: 6 / 7 span;
+      display: flex;
+      position: relative;
+
+    }
     &--1 {
       grid-column: 1 / 1 span;
       position: relative;
@@ -139,11 +146,11 @@
     }
 
     &--3 {
-      grid-column: 6 / 2 span;
+      // grid-column: 6 / 2 span;
       position: relative;
 
       .image {
-        position: absolute;
+        // position: absolute;
         transform: translateY(-68%);
         min-width: 264px;
         max-width: 264px;
@@ -166,12 +173,13 @@
     }
 
     &--4 {
-      grid-column: 8 / 3 span;
+      // grid-column: 8 / 3 span;
       position: relative;
-
+      z-index: 6;
       .image {
-        transform: translateX(-16px);
-        position: absolute;
+        transform: translateX(0px);
+
+        // position: absolute;
         z-index: 2;
         min-width: 404px;
         max-width: 404px;
@@ -182,9 +190,13 @@
         }
 
         @include tablet {
-          transform: translateX(13.5%) translateY(-50%);
-          min-width: 218px;
-          max-width: 218px;
+          transform: translateX(0%) translateY(-44%);
+          min-width: 220px;
+          max-width: 220px;
+        }
+
+        @include small-tablet {
+          transform: translateX(0%) translateY(-44%);
         }
       }
 
@@ -194,24 +206,31 @@
     }
 
     &--5 {
-      grid-column: 10 / 2 span;
-      position: relative;
+      // grid-column: 10 / 2 span;
+      // position: relative;
 
       .image {
         position: absolute;
-        transform: translateY(-65%) translateX(7%);
+        right: 0;
+        top: 0;
+        transform: translateY(-65%) translateX(130px);
         min-width: 500px;
         max-width: 500px;
 
         @include big-desktop {
+          transform: translateY(-65%) translateX(100px);
           min-width: 400px;
           max-width: 400px;
         }
 
         @include tablet {
-          transform: translateY(-130%) translateX(5%);
+          transform: translateY(-130%) translateX(50px);
           min-width: 218px;
           max-width: 218px;
+        }
+
+        @include small-tablet {
+          transform: translateY(-133%) translateX(50px);
         }
 
         @include mobile {
