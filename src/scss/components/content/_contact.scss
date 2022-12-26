@@ -62,7 +62,7 @@
 
     ul > li > a {
       margin: 0;
-      transition: all 0.4s ease;
+      transition: all 0.1s ease;
       font-family: "Grtsk Tera";
       font-style: normal;
       font-weight: 400;
@@ -150,7 +150,7 @@
       position: relative;
 
       .image {
-        // position: absolute;
+        position: absolute;
         transform: translateY(-68%);
         min-width: 264px;
         max-width: 264px;
@@ -177,26 +177,27 @@
       position: relative;
       z-index: 6;
       .image {
-        transform: translateX(0px);
+        transform: translateX(264px);
 
-        // position: absolute;
+        position: absolute;
         z-index: 2;
         min-width: 404px;
         max-width: 404px;
 
         @include big-desktop {
+          transform: translateX(194px);
           min-width: 300px;
           max-width: 300px;
         }
 
         @include tablet {
-          transform: translateX(0%) translateY(-44%);
+          transform: translateX(144px) translateY(-44%);
           min-width: 220px;
           max-width: 220px;
         }
 
         @include small-tablet {
-          transform: translateX(0%) translateY(-44%);
+          transform: translateX(144px) translateY(-44%);
         }
       }
 

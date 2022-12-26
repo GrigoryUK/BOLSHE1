@@ -27,6 +27,14 @@
     max-width: 230px;
     overflow: hidden;
 
+    &--tablet {
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
+    }
+
     @include hover {
       .header__logo--before {
         transform: translateY(-100%);
@@ -56,11 +64,11 @@
     }
 
     &--before {
-      transition: all 0.25s ease-in-out;
+      transition: all 0.2s ease-in-out;
     }
 
     &--after {
-      transition: all 0.25s ease-in-out;
+      transition: all 0.2s ease-in-out;
       opacity: 0;
       visibility: hidden;
       margin-top: -2em;
@@ -290,4 +298,20 @@
 .menu--active {
   opacity: 1;
   visibility: visible;
+}
+
+.header__logo--sticky {
+  margin-top: -55px;
+  position: sticky;
+  top: 52px;
+  z-index: 20;
+
+  @include tablet {
+    display: none;
+  }
+  .header__logo {
+    top: 0;
+    left: auto;
+    position: relative;
+  }
 }

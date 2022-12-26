@@ -2,8 +2,9 @@ import $ from 'jquery';
 import { isMobile, isTablet, isDesktop } from "../../functions/check-viewport";
 function relocationLink() {
     if(isTablet() || isDesktop()) {
+      const html = document.querySelector('html')
       setTimeout(function () {
-        return $('html').addClass('page-is-load');
+        return html.classList.add('page-is-load');
       }, 1);
       $(document).on('click', '[href]', function () {
         if ($(this).attr('target') === '_blank') return;

@@ -16,8 +16,9 @@
 
 
             @include big-desktop {
-                min-width: fit-content;
+                // min-width: fit-content;
                 height: fit-content;
+                width: auto;
             }
 
 

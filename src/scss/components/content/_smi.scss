@@ -24,7 +24,7 @@
                 font-size: 46px;
                 line-height: 130%;
                 text-align: center;
-
+                text-transform: uppercase;
                 @include mobile {
                     font-size: 28px;
                 }
@@ -109,6 +109,7 @@
         font-weight: 400;
         font-size: 46px;
         line-height: 160%;
+        text-transform: uppercase;
         color: var(--primary2);
 
         @include small-tablet {

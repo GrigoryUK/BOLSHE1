@@ -115,4 +115,4 @@ function preloader() {
   }
 }
 
-export default preloader;
+export default preloader
