@@ -1,25 +1,38 @@
-<div class="blockM">
+<div class="blockM" id="blockM">
   <div class="blockM__container">
     <div class="blockM__content">
-      <div class="blockM__video">
+      <div class="blockM__video blockM__video--desk">
         <video
           id="bigVideo"
+          preload="metadata"
           loop
           muted
-          webkit-playsinline="true"
-          playsinline="true"
+          playsinline
+          src="./video/videoDesk.mp4"
+          type="video/mp4"
         >
-        <source src="http://bolshe.depra.ru/html2/img/videobigSmall.mp4" type="video/mp4">
-      </video>
-
+        </video>
+      </div>
+      <div class="blockM__video blockM__video--mobile">
+        <video
+          id="mobileVideo"
+          preload="metadata"
+          loop
+          muted
+          playsinline
+          src="./video/mobileVideoTwo.mp4"
+          type="video/mp4">
+        </video>
       </div>
       <div class="blockM__link">
-        <a href="#catalog">
-          <svg class="svg--logo--big" viewBox="0 0 1132 149">
-            <use xlink:href="img/sprite.svg#logoBig"></use>
+        <a class="btn__to--catalog" href="#catalog">
+          <svg class="svg--logo--big" viewBox="0 0 738 147">
+            <use xlink:href="img/sprite.svg#LogoBig3"></use>
           </svg>
         </a>
       </div>
     </div>
   </div>
 </div>
+
+

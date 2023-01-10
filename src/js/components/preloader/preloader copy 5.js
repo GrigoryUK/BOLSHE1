@@ -1,129 +1,129 @@
-// Реализация остановки скролла (не забудьте вызвать функцию)
-import {isMobile, isTablet, isDesktop} from "../../functions/check-viewport";
+// // Реализация остановки скролла (не забудьте вызвать функцию)
+// import {isMobile, isTablet, isDesktop} from "../../functions/check-viewport";
 
-import {disableScroll} from "../../functions/disable-scroll";
+// import {disableScroll} from "../../functions/disable-scroll";
 
-import {enableScroll} from "../../functions/enable-scroll";
+// import {enableScroll} from "../../functions/enable-scroll";
 
-function preloader() {
-  const logo = document.querySelector(".svg--preloader");
-  const preloader = document.getElementById("preloader");
-  const body = document.getElementById('blockM');
-  if (body) {
-    const videoDesk = document.getElementById("bigVideo");
-    const videoMobile = document.getElementById("mobileVideo");
+// function preloader() {
+//   const logo = document.querySelector(".svg--preloader");
+//   const preloader = document.getElementById("preloader");
+//   const body = document.getElementById('blockM');
+//   if (body) {
+//     const videoDesk = document.getElementById("bigVideo");
+//     const videoMobile = document.getElementById("mobileVideo");
 
-    function preloadOnly() {
-      window.scrollTo(0, 0);
+//     function preloadOnly() {
+//       window.scrollTo(0, 0);
 
-      disableScroll();
+//       disableScroll();
 
-      let images = document.images,
-        imagesTotalCount = document.images.length,
-        imagesLoadedCount = 0;
-
-
-      for (let i = 0; i < imagesTotalCount; i++) {
-
-        let image_Clone = new Image();
-        image_Clone.onload = imageLoaded;
-        image_Clone.oneerorr = imageLoaded;
-        image_Clone.src = images[i].src;
-
-      }
-
-      function imageLoaded() {
-        imagesLoadedCount++;
-
-        let m = ((imagesLoadedCount * 100) / imagesTotalCount).toFixed(0);
-        let b = parseInt(m, 10);
+//       let images = document.images,
+//         imagesTotalCount = document.images.length,
+//         imagesLoadedCount = 0;
 
 
-        if (b > 80 && b < 90) {
+//       for (let i = 0; i < imagesTotalCount; i++) {
 
-          setTimeout(() => {
-            logo.style.transform = `scale(1)`;
-            if (isDesktop() || isTablet()) {
+//         let image_Clone = new Image();
+//         image_Clone.onload = imageLoaded;
+//         image_Clone.oneerorr = imageLoaded;
+//         image_Clone.src = images[i].src;
 
+//       }
 
-              videoDesk.play();
-              videoDesk.setAttribute("autoplay", "");
+//       function imageLoaded() {
+//         imagesLoadedCount++;
 
-
-            }
-            if (isMobile()) {
-
-
-
-                videoMobile.play();
-                videoMobile.setAttribute("autoplay", "");
-
-            }
-
-          }, 600)
-        }
+//         let m = ((imagesLoadedCount * 100) / imagesTotalCount).toFixed(0);
+//         let b = parseInt(m, 10);
 
 
-        if (isDesktop() || isTablet()) {
-          if (imagesLoadedCount >= imagesTotalCount) {
+//         if (b > 80 && b < 90) {
 
-            setTimeout(() => {
-
-              preloader.classList.add("preloader--hide");
-              enableScroll();
+//           setTimeout(() => {
+//             logo.style.transform = `scale(1)`;
+//             if (isDesktop() || isTablet()) {
 
 
-            }, 1000);
+//               videoDesk.play();
+//               videoDesk.setAttribute("autoplay", "");
 
 
-          }
-        }
-        if (isMobile() && imagesLoadedCount >= imagesTotalCount) {
+//             }
+//             if (isMobile()) {
 
 
-          setTimeout(() => {
 
-            videoMobile.addEventListener('canplay', (event) => {
-              console.log(1)
-              preloader.classList.add("preloader--hide");
-              enableScroll();
-            });
-          }, 500);
-        }
+//                 videoMobile.play();
+//                 videoMobile.setAttribute("autoplay", "");
 
-      }
-    }
+//             }
+
+//           }, 600)
+//         }
 
 
-    function preloadEvery() {
-      preloader.style.display = 'none';
-      if (isDesktop() || isTablet()) {
+//         if (isDesktop() || isTablet()) {
+//           if (imagesLoadedCount >= imagesTotalCount) {
 
-        videoDesk.play();
-        videoDesk.setAttribute("autoplay", "");
-      }
-      if (isMobile()) {
-        videoMobile.addEventListener('canplay', (event) => {
-          videoMobile.play();
-          videoMobile.setAttribute("autoplay", "");
-        });
+//             setTimeout(() => {
 
-      }
+//               preloader.classList.add("preloader--hide");
+//               enableScroll();
 
 
-    }
+//             }, 1000);
 
 
-    if (!sessionStorage.getItem('doNotShow6')) {
-      sessionStorage.setItem('doNotShow6', 'true');
-      preloadOnly();
-    } else {
-      preloadEvery()
+//           }
+//         }
+//         if (isMobile() && imagesLoadedCount >= imagesTotalCount) {
 
-    }
 
-  }
-}
+//           setTimeout(() => {
 
-export default preloader
+//             videoMobile.addEventListener('canplay', (event) => {
+//               console.log(1)
+//               preloader.classList.add("preloader--hide");
+//               enableScroll();
+//             });
+//           }, 500);
+//         }
+
+//       }
+//     }
+
+
+//     function preloadEvery() {
+//       preloader.style.display = 'none';
+//       if (isDesktop() || isTablet()) {
+
+//         videoDesk.play();
+//         videoDesk.setAttribute("autoplay", "");
+//       }
+//       if (isMobile()) {
+//         videoMobile.addEventListener('canplay', (event) => {
+//           videoMobile.play();
+//           videoMobile.setAttribute("autoplay", "");
+//         });
+
+//       }
+
+
+//     }
+
+
+//     if (!sessionStorage.getItem('doNotShow6')) {
+//       sessionStorage.setItem('doNotShow6', 'true');
+//       preloadOnly();
+//     } else {
+//       preloadEvery()
+
+//     }
+
+//   }
+// }
+
+// export default preloader
 

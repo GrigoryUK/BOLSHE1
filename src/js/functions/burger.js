@@ -6,6 +6,8 @@ import { enableScroll } from '../functions/enable-scroll';
   const menu = document?.querySelector('[data-menu]');
   const menuItems = document?.querySelectorAll('[data-menu-item]');
   const overlay = document?.querySelector('[data-menu-overlay]');
+  const pageful = document.querySelector('.fullpage')
+  const header = document.querySelector('header')
 
   burger?.addEventListener('click', (e) => {
     burger?.classList.toggle('burger--active');
@@ -37,6 +39,11 @@ import { enableScroll } from '../functions/enable-scroll';
       burger.classList.remove('burger--active');
       menu.classList.remove('menu--active');
       enableScroll();
+      if (document.body.contains(pageful)) {
+
+        header.classList.remove('active');
+
+      }
     });
   });
 })();

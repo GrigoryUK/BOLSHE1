@@ -1,53 +1,58 @@
 .svg {
 
-    &--logo {
 
-        &--small {
-            max-width: 40px;
-            max-height: 46px;
-            fill: var(--primary1);
-        }
+  &--logo {
 
-        &--letter {
-            max-width: 230px;
-            max-height: 31px;
-            fill: var(--primary1);
-        }
-
-        &--mob {
-            max-width: 25px;
-            max-height: 28.5px;
-            min-width: 25px;
-            min-height: 28.5px;
-            fill: var(--primary1);
-        }
-
-        &--big {
-            max-width: 1132px;
-            min-width: 1132px;
-            fill: var(--primary1);
-            transition: all .2s ease;
-
-            @include big-desktop {
-                max-width: 1114px;
-                min-width: 1114px;
-            }
-
-            @include tablet {
-                max-width: 560px;
-                min-width: 560px;
-            }
-
-            @include mobile {
-                max-width: 260px;
-                min-width: 260px;
-
-            }
-        }
+    &--small {
+      max-width: 40px;
+      max-height: 46px;
+      fill: var(--primary1);
     }
 
-    &--error {
-        max-width: 1660px;
-        width: 100%;
+    &--letter {
+      max-width: 230px;
+      max-height: 31px;
+      fill: var(--primary1);
     }
+
+    &--mob {
+      max-width: 25px;
+      max-height: 28.5px;
+      min-width: 25px;
+      min-height: 28.5px;
+      fill: var(--primary1);
+    }
+
+    &--big {
+      max-width: 940px;
+      min-width: 940px;
+      fill: var(--primary1);
+      transition: all .2s ease;
+
+      @include big-desktop {
+        max-width: 900px;
+        min-width: 900px;
+      }
+
+      @include tablet {
+        max-width: 460px;
+        min-width: 460px;
+      }
+
+      @include mobile {
+        max-width: 260px;
+        min-width: 260px;
+
+      }
+    }
+  }
+
+  &--preloader {
+    transition: .4s ease;
+  }
+
+  &--error {
+    max-width: 1660px;
+    width: 100%;
+  }
 }

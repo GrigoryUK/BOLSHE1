@@ -1,22 +1,19 @@
 .preloader {
-    &__container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        background: var(--primary2);
-        height: 100vh;
-        width: 100vw;
-        transition: all 0.8s ease-in-out;
-        max-height: 100vh;
-        z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--primary2);
+  height: 100vh;
+  width: 100vw;
+  transition: all 0.8s ease-in-out;
+  max-height: 100vh;
+  z-index: 1000;
 
-
-        &.preloader--hide {
-            opacity: 0;
-            visibility: hidden;
-            z-index: -100;
-        }
-    }
+  &.preloader--hide {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -100;
+  }
 
     &__content {
         position: absolute;

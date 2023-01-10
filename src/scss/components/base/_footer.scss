@@ -17,7 +17,7 @@
         justify-content: space-between;
         margin-bottom: 20px;
 
-        @include min-desktop {
+        @include big-desktop {
             flex-direction: column;
             align-items: stretch;
         }
@@ -62,7 +62,7 @@
         }
 
         &--right {
-            @include min-desktop {
+            @include big-desktop {
                 margin-bottom: 20px;
             }
 

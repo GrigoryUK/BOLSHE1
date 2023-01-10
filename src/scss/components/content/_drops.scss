@@ -47,6 +47,10 @@
 
       @include mobile {
         display: grid;
+
+        .default__item--mobile {
+          margin-bottom: 10px;
+        }
       }
     }
   }

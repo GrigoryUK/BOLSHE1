@@ -7,8 +7,9 @@ import relocationLink from "./relocation/relocation";
 import touchImage from "./touch/touch";
 import {addClassName} from "./addClassName/addClassName";
 
-preloader();
+
 document.addEventListener("DOMContentLoaded", function (e) {
+  preloader();
   menuList();
   modalDef();
   anchor();

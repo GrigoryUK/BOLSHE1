@@ -377,6 +377,10 @@
       display: none;
       @include mobile {
         display: block;
+
+        .default__item--mobile {
+          margin-bottom: 10px;
+        }
       }
 
       .default__item {

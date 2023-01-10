@@ -1,118 +1,126 @@
 // Реализация остановки скролла (не забудьте вызвать функцию)
-import { disableScroll } from "../../functions/disable-scroll";
+import {isMobile, isTablet, isDesktop} from "../../functions/check-viewport";
 
-import { enableScroll } from "../../functions/enable-scroll";
+import {disableScroll} from "../../functions/disable-scroll";
+
+import {enableScroll} from "../../functions/enable-scroll";
 
 function preloader() {
   const logo = document.querySelector(".svg--preloader");
-  const preloader = document.querySelector(".preloader__container");
-  const video = document.getElementById("bigVideo");
-  if (preloader) {
-    disableScroll();
+  const preloader = document.getElementById("preloader");
+  const body = document.getElementById('blockM');
+  if (body) {
+    const videoDesk = document.getElementById("bigVideo");
+    const videoMobile = document.getElementById("mobileVideo");
 
-    let images = document.images,
-      imagesTotalCount = document.images.length,
-      imagesLoadedCount = 0;
-
-
-
-    for (var i = 0; i < imagesTotalCount; i++) {
-
-      let image_Clone = new Image();
-      image_Clone.onload = imageLoaded;
-      image_Clone.oneerorr = imageLoaded;
-      image_Clone.src = images[i].src;
-
-    }
-
-    function imageLoaded() {
-      imagesLoadedCount++;
-
-      let m = ((imagesLoadedCount * 100) / imagesTotalCount).toFixed(0);
-      let b = parseInt(m, 10);
+    function preloadOnly() {
+      window.scrollTo(0, 0);
+      disableScroll();
 
 
-
-      if (b > 30 && b < 60) {
-        setTimeout(() => {
-          logo.style.transform = `scale(.3)`;
-        }, 200)
-
+      function scaleLogo() {
+        logo.style.transform = `scale(1)`;
       }
 
-      if (b > 60 && b < 80) {
-
+      function videoPlay(video) {
         setTimeout(() => {
-          logo.style.transform = `scale(.6)`;
-        }, 400)
-      }
-
-      if (b > 80 && b < 90) {
-
-        setTimeout(() => {
-          logo.style.transform = `scale(1)`;
-        }, 600)
-      }
-
-
-
-      if (imagesLoadedCount >= imagesTotalCount) {
-        setTimeout(() => {
-          preloader.classList.add("preloader--hide");
           video.play();
           video.setAttribute("autoplay", "");
-          enableScroll();
-        }, 1000)
+          video.click()
+        }, 300)
       }
+
+
+
+      function preloadHide() {
+        preloader.classList.add("preloader--hide");
+        enableScroll();
+      }
+
+
+
+      const delay = (time) => {
+        return new Promise((resolve, reject) => setTimeout(resolve, time))
+      }
+
+
+      if (isDesktop() || isTablet()) {
+
+
+        videoDesk.addEventListener('loadedmetadata', (event) => {
+          delay(100)
+            .then(() => {
+              scaleLogo()
+              return delay(400)
+            })
+            .then(() => {
+              videoPlay(videoDesk)
+              return delay(500)
+            })
+            .then(() => {
+              preloadHide()
+            })
+        })
+
+
+      }
+      if (isMobile()) {
+        videoMobile.addEventListener('loadedmetadata', (event) => {
+
+
+          delay(100)
+            .then(() => {
+              scaleLogo()
+              return delay(400)
+            })
+            .then(() => {
+              videoPlay(videoMobile)
+              return delay(500)
+            })
+            .then(() => {
+              preloadHide()
+            })
+
+
+        });
+
+
+      }
+
+
     }
 
 
-    // mediaFiles.forEach((file, index) => {
-    //   console.log(video.readyState);
+    function preloadEvery() {
+      preloader.style.display = 'none';
+      if (isDesktop() || isTablet()) {
+        videoDesk.addEventListener('loadedmetadata', (event) => {
+          videoDesk.play();
+          videoDesk.setAttribute("autoplay", "");
+        })
+      }
+      if (isMobile()) {
+        videoMobile.addEventListener('loadedmetadata', (event) => {
+          videoMobile.play();
+          videoMobile.setAttribute("autoplay", "");
+        });
 
-    //   if(file.complete) {
-    //     i++;
-    //     let m = ((i * 100) / mediaFiles.length).toFixed(0);
-    //     let numberProperties = parseInt(m, 10);
-    //     console.log(numberProperties);
+      }
 
-    //     gsap.registerPlugin(TimelineLite);
-    //     const tl = new TimelineLite();
-    //     // onComplete: endPreloader
 
-    //     if (numberProperties > 30) {
+    }
 
-    //       // logo.style.transform = `scale(.3)`;
-    //       tl.to(logo, .3, { css:{ scale:0.3},
-    //         })
 
-    //     }
+    if (!sessionStorage.getItem('doNotShowTen')) {
+      sessionStorage.setItem('doNotShowTen', 'true');
+      preloadOnly()
+    } else {
+      preloadEvery()
 
-    //     if (numberProperties > 60) {
-    //       // logo.style.transform = `scale(.6)`;
-    //       tl.to(logo, .3, { css:{scale:0.6},
-    //       }, 1)
-    //     }
+    }
 
-    //     if (numberProperties > 80) {
-    //       // logo.style.transform = `scale(.8)`;
-    //       tl.to(logo, .3, {css:{scale:1},
-    //       }, 2)
-    //     }
-
-    //     if (numberProperties > 90 && video.readyState == 4) {
-
-    //       readyVideo()
-    //     }
-
-    //   }
-    //   // vid.readyState
-    //   function readyVideo(){
-
-    //   }
-
-    // });
   }
 }
 
 export default preloader
+

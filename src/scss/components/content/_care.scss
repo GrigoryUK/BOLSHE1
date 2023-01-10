@@ -171,7 +171,6 @@
 
           @include mobile {
             display: block;
-            transform: none;
             transform: translate(80px, 0%);
           }
 
@@ -285,7 +284,6 @@
           }
 
           @include mobile {
-            transform: none;
             transform: translate(12em, 0%);
           }
 
