@@ -4,17 +4,17 @@ import modalDef from "./modal/modal";
 import anchor from "./anchor/anchor";
 import preloader from "./preloader/preloader";
 import relocationLink from "./relocation/relocation";
-import touchImage from "./touch/touch";
-import {addClassName} from "./addClassName/addClassName";
+import addClassName from "./addClassName/addClassName";
 
 
+
+relocationLink();
 document.addEventListener("DOMContentLoaded", function (e) {
   preloader();
-  menuList();
-  modalDef();
   anchor();
-  burger();
-  relocationLink();
-  touchImage();
   addClassName();
+  modalDef();
+  menuList();
+  burger();
+
 });

@@ -1,5 +1,7 @@
 import $ from 'jquery';
-import { isMobile, isTablet, isDesktop } from "../../functions/check-viewport";
+import { isTablet, isDesktop } from "../../functions/check-viewport";
+
+// relocation
 function relocationLink() {
     if(isTablet() || isDesktop()) {
       const html = document.querySelector('html')

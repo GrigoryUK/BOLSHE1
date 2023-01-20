@@ -1,8 +1,7 @@
 // add className to catalog__box
-import { isMobile, isTablet, isDesktop } from "../../functions/check-viewport";
 
 function addClassName() {
-  // классы должны добавляться, чтобы новые категорий
+  // классы должны добавляться, чтобы новые категорий росли дальше при необходимости если что можно убрать и написать свою функцию
   const containerCatalog = document.querySelector('.catalog__content--desk');
 
 
@@ -41,24 +40,8 @@ function addClassName() {
     }
   }
 
-  // const containerCare = document.querySelector('.care__content');
 
-  // if (containerCare) {
-  //   const items = containerCare.querySelectorAll('.care__box');
-  //   const itemsCount = items.length;
-
-  //   let itemFix = 0;
-  //   for (let i = 0; i < itemsCount; i++) {
-  //     itemFix++;
-  //     const item = items[i];
-  //     item.classList.add(`care__box--` + itemFix);
-
-  //     if (itemFix % 2 === 0) {
-  //       itemFix = 0;
-  //     }
-  //   }
-  // }
 
 }
 
-export {addClassName};
+export default addClassName
