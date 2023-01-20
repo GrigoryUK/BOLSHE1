@@ -21,3 +21,11 @@ export const isDesktop = () => {
 
   return false;
 };
+
+export const isIpad = () => {
+  if (window.innerWidth >= 576 && window.innerWidth <= 1366) {
+    return true;
+  }
+
+  return false;
+};

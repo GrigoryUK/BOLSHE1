@@ -169,6 +169,7 @@
     &--2 {
       grid-column: 6 / 3 span;
       position: relative;
+      z-index: 11;
 
 
       .default__item {
@@ -203,6 +204,7 @@
     &--3 {
       // grid-column: 6 / 2 span;
       position: relative;
+      z-index: 12;
 
       .default__item {
         position: absolute;
@@ -313,7 +315,7 @@
 
     &--6 {
       grid-column: 2 / 3 span;
-
+      z-index: 13;
       .default__item {
         max-width: 403px;
         min-width: 403px;

@@ -1,5 +1,6 @@
-import { isMobile, isTablet, isDesktop } from "../../functions/check-viewport";
+import { isMobile } from "../../functions/check-viewport";
 
+// burger
 function burger() {
 
     if(isMobile()) {
@@ -8,7 +9,7 @@ function burger() {
             const btn = document.querySelector('.burger');
             btn.addEventListener('click', el => {
                 const header = document.querySelector('header')
-                header.classList.toggle('active'); 
+                header.classList.toggle('active');
             })
         }
     }

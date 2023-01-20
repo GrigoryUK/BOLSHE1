@@ -1,3 +1,5 @@
+
+// touch Mobile
 function touchImage() {
   const items = document.querySelectorAll(".default__item");
   if (items) {

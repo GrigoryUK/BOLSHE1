@@ -5,6 +5,8 @@ import {disableScroll} from "../../functions/disable-scroll";
 
 import {enableScroll} from "../../functions/enable-scroll";
 
+
+// preloader
 function preloader() {
   const logo = document.querySelector(".svg--preloader");
   const preloader = document.getElementById("preloader");
@@ -94,15 +96,16 @@ function preloader() {
     function preloadEvery() {
       preloader.style.display = 'none';
       if (isDesktop() || isTablet()) {
+        videoDesk.setAttribute("autoplay", "");
         videoDesk.addEventListener('loadedmetadata', (event) => {
           videoDesk.play();
-          videoDesk.setAttribute("autoplay", "");
         })
       }
       if (isMobile()) {
+        videoMobile.setAttribute("autoplay", "");
         videoMobile.addEventListener('loadedmetadata', (event) => {
           videoMobile.play();
-          videoMobile.setAttribute("autoplay", "");
+
         });
 
       }

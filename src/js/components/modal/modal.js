@@ -1,5 +1,6 @@
 import GraphModal from 'graph-modal';
 
+// modal
 function modalDef() {
 
     const btn = document.querySelector('.btn__care');
@@ -11,7 +12,7 @@ function modalDef() {
         for (let i = 0; i < items.length; i++ ) {
             items[i].addEventListener('click', function(e) {
                 let btn = items[i].querySelector('button');
-                btn.click(); 
+                btn.click();
             })
         }
     }
